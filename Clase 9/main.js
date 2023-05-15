@@ -19,7 +19,7 @@ Cada parte del documento es un NODO.
 
 //getElementsByClassName
 // let animales=document.getElementsByClassName("animales"); //Esto se vuelve un HTMl COLECTION 
-// console.log(animales[0].innerHTML);
+// console.log(animales[0].innerHTML); //Esto no es un arreglo
 // console.log(animales[1].innerHTML);
 // console.log(animales[2].innerHTML);
 
@@ -90,3 +90,4 @@ encontrados.forEach(item=>{
     `
     contenedor.append(div);
 });
+//01:15
