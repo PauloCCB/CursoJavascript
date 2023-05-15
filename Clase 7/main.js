@@ -24,20 +24,21 @@
 // const restar = operaciones ("restar");
 // console.log(restar(10,2));
 
-// function iterador (arreglo,funcion){
-//     for(const numero of arreglo){
-//         funcion(numero); //console.log(numero);
-//     }
-// }
-// iterador([5,6,7,3],console.log);
-// const duplicado=[];
-// function iterador (arreglo,funcion){
-// for(const numero of arreglo){
-//     funcion(numero); //console.log(numero);
-//     }
-// }
-// iterador([5,6,7,3],(el)=>duplicado.push(el*2));
-// console.log(duplicado);
+/*function iterador (arreglo,funcion){
+    for(const numero of arreglo){
+        funcion(numero); //console.log(numero);
+    }
+}
+iterador([5,6,7,3],console.log);*/
+
+/*const duplicado=[];
+function iterador (arreglo,funcion){
+for(const numero of arreglo){
+    funcion(numero); //console.log(numero);
+    }
+}
+iterador([5,6,7,3],(el)=>duplicado.push(el*2));
+console.log(duplicado);*/
 
 //forEach
 const productos=[
@@ -46,9 +47,22 @@ const productos=[
 {id:3 , nombre: "corbata",precio: 1100},
 {id:4 , nombre: "gorra", precio: 1000},
 ]
-// /*productos.forEach(item=>{  //Este forEach recorre el objeto , arreglo, mediante un arrowfunction
-//     console.log(item.nombre);
-// });*/
+function forEach() {
+    
+}
+/*productos.forEach(item=>{  //Este forEach recorre el objeto , arreglo, mediante un arrowfunction
+    console.log(item.nombre);
+});*/
+
+const resultArray=productos.forEach((element,i)=>{
+    console.log(`${element.precio} se encuentra en el indica ${i}`)
+    });
+    
+
+
+/*productos.forEach(item=>{
+    console.log(item.precio);
+})*/
 
 //find
 // let nombre=prompt("Nombre");
@@ -68,7 +82,7 @@ const productos=[
 //filter: filtra elementos de un arreglo
 // let precio=parseInt(prompt("Precio"));
 // const encontrados= productos.filter(item=>item.precio>=precio);
-//alert(encontrados); //Como es un arreglo, tengo que recorrerlo ps, un alert me muestra mensajes nomas
+// alert(encontrados); //Como es un arreglo, tengo que recorrerlo ps, un alert me muestra mensajes nomas
 // encontrados.forEach(item =>{
 //     let mensaje=`
 //     Id:${item.id}
@@ -102,23 +116,23 @@ const productos=[
 // console.log(numeros.sort((a,b)=>a-b)); //Siendo a, el primer termino
 // console.log(numeros.sort((a,b)=>b-a));
 
-const items=[
-    {name:"Pikachu",price:21},
-        {name:"Charmander",price:37},
-        {name:"Pidgey",price:45},
-        {name:"Squirtle",price:30},
-]
-console.log(
-    items.sort((a,b)=>{
-        if(a.name>b.name){
-            return 1;   //Con esto le indicamos que ordene de mayor a menor
-        }
-        if(a.name<b.name){
-            return -1;
-        }
-        //a es igual b
-            return 0;
-    })
-);
+// const items=[
+//     {name:"Pikachu",price:21},
+//         {name:"Charmander",price:37},
+//         {name:"Pidgey",price:45},
+//         {name:"Squirtle",price:30},
+// ]
+// console.log(
+//     items.sort((a,b)=>{
+//         if(a.name>b.name){
+//             return 1;   //Con esto le indicamos que ordene de mayor a menor
+//         }
+//         if(a.name<b.name){
+//             return -1;
+//         }
+         //a es igual b
+//             return 0;
+//     })
+// );
 
 

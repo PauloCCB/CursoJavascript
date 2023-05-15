@@ -1,11 +1,11 @@
-/*function saludar(){
+function saludar(){
     let nombre=prompt("Ingrese su nombre");
-    let mensaje = `Hola ${nomer}`;
+    let mensaje = `Hola ${nombre}`;
     alert(mensaje);
 }
 saludar();
-/*
-Cuando se pone el return, ya se acaba la función
+
+/*Cuando se pone el return, ya se acaba la función
 function saludar(saludo,nombre){
     let mensaje = `${saludo} ${nombre}`;
     console.log(mensaje);
@@ -72,4 +72,3 @@ const iva=x=>x*0.21;
 let precioproducto=1000;
 let descuento=10;
 let nuevoPrecio= resta(suma(precioproducto,iva(precioproducto)),descuento);*/
- 
