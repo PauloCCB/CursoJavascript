@@ -4,9 +4,9 @@
 //     console.log("Hola click");
 // }
 //Primera forma
-//boton.addEventListener("click",respuesta); //(parametro,funcion) ,
+//boton.addEventListener("click",respuesta); //(parametro,funcion) , el primer parametro es el nombre del evento
 /*esta funcion puede pasarse solo la declaracion, mas no la ejecucion respuesta()*/
-
+//Se utiliza mas la primera forma
 
 //Segunda forma
 //  const respuesta =()=>{
@@ -21,7 +21,7 @@
 // console.log(`Hola  ${nombre}`);
 // } 
 // boton.addEventListener("click", () => respuesta("andres"));
-
+//Cuando la función tiene parametros la solución es poner una arrow función , como se puede obtener alla
 
 //Tercera forma
 /* <input type="button" value="Click" onclick="alert('Hola')
@@ -60,7 +60,7 @@
 // })
 // let nombre=document.getElementById("nombre");
 // let saludo=document.getElementById("saludo");
-// nombre.addEventListener("keydown",(e)=>{
+// nombre.addEventListener("keydown",(e)=>{ //El e reconoce la letra que tu presionaste
 //     if(e.key=="a"){
 //         saludo.className="rojo";
 //     }else if(e.key=="s"){
@@ -87,7 +87,7 @@
 // })
 let arreglo=[];
 let formulario=document.getElementById("formulario");
-formulario.addEventListener("submit",(e)=> //e , significa la informacion del evento, esa e traera 
+formulario.addEventListener("submit",(e)=> //e , significa la informacion del evento, guarda la informacion del formulario esa e traera 
 //la información de todo ese formulario
 {
     e.preventDefault(); //Previene el funcionamiento normal de la pagina, en caso 
@@ -100,14 +100,14 @@ formulario.addEventListener("submit",(e)=> //e , significa la informacion del ev
     // }
 
     if(!inputs[0].value.includes("@")){
-        inputs[0].value=" ";
+        inputs[0].value=" ";    //inputs en 0 , es el del inicio
         let div=document.createElement("div");
         div.innerHTML="No contiene @";
-        document.body.append(div);
+        document.body.append(div); //Se le agrega en el body
     }
     else{
-        // arreglo.push(inputs[0].value);
-        // console.log(arreglo);
+        arreglo.push(inputs[0].value);
+        console.log(arreglo[0]);
         let div = document.createElement("div");
         div.innerHTML= inputs[0].value;
         document.body.append(div);
