@@ -73,14 +73,14 @@
 // }
 
 /* -----*/
-// let productos=[
-//     {id:1 ,nombre:"camisa ",precio:1000},
-//     {id:2 ,nombre:"pantalon ",precio:1100},
-//     {id:3 ,nombre:"zapatilla",precio:1200},
-//     {id:4 ,nombre:"media",precio:1300},
-// ];
+let productos=[
+    {id:1 ,nombre:"camisa ",precio:1000},
+    {id:2 ,nombre:"pantalon ",precio:1100},
+    {id:3 ,nombre:"zapatilla",precio:1200},
+    {id:4 ,nombre:"media",precio:1300},
+];
 
-// localStorage.setItem("carrito",JSON.stringify(productos));
+localStorage.setItem("carrito",JSON.stringify(productos));
 let boton=document.getElementById("borrar");
 let carrito=[];
 let carritoStorage=localStorage.getItem("carrito");
