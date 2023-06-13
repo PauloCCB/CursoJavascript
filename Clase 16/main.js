@@ -1,5 +1,6 @@
 /*Ajax
-Son un conjunto de tecnicas de desarrollo  que permiten que las aplicaciones, trabajen de manera asincrona*/
+Son un conjunto de tecnicas de desarrollo  que permiten que las aplicaciones, trabajen de manera asincrona
+Ajax funciona con archivos JSon , que es un forma mas compacta de transmitir los datos*/
 
 /*Peticiones HTTP:
 El mecanismo por el cual se piden y proveen datos a traves de internet es HTTP. Cuando emitimos una orden
@@ -22,6 +23,10 @@ Por ejemplo: www.pokeapi.co/api/v2/pokemon/{id or name}
 www.pokeapi.co/api/v2/pokemon/1 --- 
 */
 
+
+/*API
+Significa interfaz de programacion de aplicaciones.Son sistemas intermedios que sirven para que una aplicacion
+pueda interactuar con otra y asi pueda funcionar correctamente */
 /*Una API es una interfaz para que se comuniquen aplicaciones, programas de software y compartan
 datos entre ellos. Hay muchas APIS disponibles que podemos utilizar para acceder a distintos recursos útiles para nuestra
 aplicación. Ejemplo: Servicio de contenido , Plataformas de pago , servicios de e-mail,etcetera */

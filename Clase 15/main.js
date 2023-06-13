@@ -1,4 +1,7 @@
 /*Programacion asincrona y sincrona*/
+//Importancia : Promesas > Funcion Callback
+/*Cuando utilizamos un API que nos devuelve un servicio , etc .Esta llamada que se hace atraves
+de la red tiene un tiempo de delay, y produce una asincronia por la cual no es algo directo.*/
 /*Funcion asincrona*/
 //setTimeout(funcion,timer);
 // console.log("Inicio");
@@ -73,19 +76,22 @@ asincrona recien se ejecuta en el CallStack*/
 //     }
 // }, 1000);
 
-/*Promesas*/
-//resolver , para cumplir con la promesa y el reject para indicarle que se rechazó
-// new Promise((resolve, reject) => { 
-//     //cuerpo de la promesa
-// })
+/*Promesas
+Son un objeto especial de JavaScript que nos permite ejecutar un trozo de codigo,y cuando este listo
+se devuelve. 
+*/
+//resolve , para cumplir con la promesa y el reject para indicarle que se rechazó
+/* new Promise((resolve, reject) => { 
+    cuerpo de la promesa
+})*/
 
 // const futuro=(value)=>{
 //     return new Promise((resolve, reject) => {
-//         // if(value=true){
-//         //     resolve("Promesa resuelta");
-//         // }else{
-//         //     reject("Promesa rechazada");
-//         // }
+//         if(value=true){
+//             resolve("Promesa resuelta");
+//         }else{
+//             reject("Promesa rechazada");
+//          }
 //         value?resolve(["paulo","joaquin"]):reject("Promesa rechazada");
 //     })
 // }
