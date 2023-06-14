@@ -1,0 +1,17 @@
+.clima{
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-family: sans-serif;  
+
+}
+#container{ 
+    color: rgb(7,9,19);
+    background-image: linear-gradient(rgb(165, 156, 173),rgb(152, 208, 223));    
+    border-radius: 16px;
+    text-align: center;
+    padding: 20px 10px 20px 10px;
+}
