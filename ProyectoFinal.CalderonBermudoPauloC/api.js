@@ -23,12 +23,13 @@ window.addEventListener("load",()=>{
             const url =`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${api}`;
 
             fetch(url) //solicitud HTTP  a la url
-            .then((response)=>{
+            .then((response)=>{ //Manejo la respuesta
                 console.log("RESPUESTA JSON");
-                return response.json();
+                //console.log(response); //Devuelve detalles de respuesta HTTP
+                return response.json(); //Devuelvo la promesa , y Obtener los datos
             })
 
-            .then((data)=>{
+            .then((data)=>{ //Manejo de datos
                 console.log("Esta es la data");
                 console.log(data);
                 temperature.textContent =
@@ -42,7 +43,8 @@ window.addEventListener("load",()=>{
                 codigo=data.weather[0].icon;
                 imagen.src=`https://openweathermap.org/img/wn/${codigo}.png`;
                 icon.appendChild(imagen);
-            });
+            })
+            .catch((error)=>console.log(error));
         })
     }
 })
