@@ -12,7 +12,7 @@ let codigo="";
 
 window.addEventListener("load",()=>{
 
-    if(navigator.geolocation){
+    if(navigator.geolocation){ //
         navigator.geolocation.getCurrentPosition((position)=>{  //Con estos metodos me permiten saber mi localizacion
             console.log(position);
             lon=position.coords.longitude;
@@ -22,7 +22,7 @@ window.addEventListener("load",()=>{
             const api ="ffbefdd278b4a6428a5e1a60652ee2ae";
             const url =`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${api}`;
 
-            fetch(url)
+            fetch(url) //solicitud HTTP  a la url
             .then((response)=>{
                 console.log("RESPUESTA JSON");
                 return response.json();

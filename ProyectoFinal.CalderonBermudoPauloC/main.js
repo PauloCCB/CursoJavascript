@@ -40,7 +40,6 @@ function validarFormulario(e) {
     objProducto.nombre = nombreInput.value;
     objProducto.precio = precioInput.value;
     agregarProducto();
-
 }
 
 
@@ -52,7 +51,7 @@ function agregarProducto() { //Funcion para agregar producto
     limpiarObjeto();
 }
 function agregarLocalStorage() { //Con esta función agrego al localStorage
-    localStorage.setItem("carrito",JSON.stringify(listaProductos));
+    localStorage.setItem("carrito",JSON.stringify(listaProductos)); //Convierto en una cadena JSON
 }
 function mostrarProductosLocalStorage(){ //Con esta función muestro lo guardado en el localStorage
     limpiarHTML();
@@ -60,7 +59,7 @@ function mostrarProductosLocalStorage(){ //Con esta función muestro lo guardado
     let carrito=[];
     let carritoStorage=localStorage.getItem("carrito");
     if(carritoStorage){
-        carrito=JSON.parse(carritoStorage);
+        carrito=JSON.parse(carritoStorage); //Convierto la cadena JSON en un obj de JS
     }
     carrito.forEach((item)=>{
         const parrafo = document.createElement('p');
