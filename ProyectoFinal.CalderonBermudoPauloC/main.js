@@ -11,6 +11,11 @@ document.addEventListener('DOMContentLoaded',
         })
     }
 );
+
+document.addEventListener('DOMContentLoaded',()=>{
+    mostrarProductosLocalStorage();
+    agregarLocalStorage();
+})
 let listaProductos = []; //Creacion del arreglo
 let guardarStorage;
 const objProducto = {
@@ -19,7 +24,6 @@ const objProducto = {
     precio: '',
 }
 
-let editando = false;
 const formulario = document.getElementById("formulario");
 const idInput = document.getElementById("id");
 const nombreInput = document.getElementById("nombre");
@@ -27,7 +31,7 @@ const precioInput = document.getElementById("precio");
 const btnAgregarInput = document.getElementById("btnAgregar");
 
 
-formulario.addEventListener('submit', validarFormulario);
+formulario.addEventListener('submit',validarFormulario);
 
 
 function validarFormulario(e) {
@@ -44,17 +48,22 @@ function validarFormulario(e) {
 
 
 function agregarProducto() { //Funcion para agregar producto
+    cargarLocalStorage();
     listaProductos.push({ ...objProducto });
     agregarLocalStorage();
     mostrarProductosLocalStorage();
-    formulario.reset();
     limpiarObjeto();
 }
 function agregarLocalStorage() { //Con esta función agrego al localStorage
     localStorage.setItem("carrito",JSON.stringify(listaProductos)); //Convierto en una cadena JSON
 }
+function cargarLocalStorage(){
+    const productosStorage = localStorage.getItem("carrito");
+    listaProductos = productosStorage ? JSON.parse(productosStorage) : [];
+}
+
 function mostrarProductosLocalStorage(){ //Con esta función muestro lo guardado en el localStorage
-    limpiarHTML();
+    /*limpiarHTML();
     const divProductos = document.getElementById('div-productos');
     let carrito=[];
     let carritoStorage=localStorage.getItem("carrito");
@@ -68,14 +77,26 @@ function mostrarProductosLocalStorage(){ //Con esta función muestro lo guardado
         const hr = document.createElement('hr');
         divProductos.appendChild(parrafo);
         divProductos.appendChild(hr);
-    })
+    })*/
+    limpiarHTML();
+    const divProductos = document.getElementById('div-productos');
+    
+    listaProductos.forEach((item) => {
+        const parrafo = document.createElement('p');
+        parrafo.textContent = `${item.id} - ${item.nombre} - ${item.precio} `;
+        parrafo.dataset.id = item.id;
+        const hr = document.createElement('hr');
+        divProductos.appendChild(parrafo);
+        divProductos.appendChild(hr);
+    }); 
+
 }
 function limpiarObjeto() {
     objProducto.id = '';
     objProducto.nombre = '';
     objProducto.precio = '';
 }
-function limpiarHTML() {
+function limpiarHTML() { //Limpiar el contenido del HTML
     const divProductos = document.getElementById('div-productos');
     while (divProductos.firstChild) {
         divProductos.removeChild(divProductos.firstChild);
@@ -89,6 +110,8 @@ btnAgregarInput.addEventListener('click',()=>{ //Libreria SweetAlert2
         title: 'El producto ha sido agregado',
         showConfirmButton: false,
         timer: 1500
-    })
-})
+    }).then(() => {
+        agregarProducto();
+    });
+});
 
