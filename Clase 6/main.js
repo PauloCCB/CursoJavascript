@@ -7,7 +7,7 @@ Control + k + c
 // const nombres=["Enzo","Paulo","andres"];
 // const valores=[true,false,false,true];
 // const varios=[1,true,"Angeles"];
-// //console.log(nombres[1]);
+ //console.log(nombres[1]);
 // for(let index=0;index<nombres.length;index++){
 //     console.log(nombres[index]);
 // }
@@ -55,10 +55,19 @@ const producto=[
     {id:3 , nombre:"gorra",precio:3000},
     {id:4 , nombre:"media",precio:4000},
 ];
-for (const item of producto){
+/*for (const item of producto){
     console.log(item.nombre); 
     console.log(item.precio);
+}*/
+producto.push({
+    id:5, nombre:"mouse",precio:2111
+},
+)
+for (const item of producto){
+    console.log(item(1)); 
+    console.log(item.precio);
 }
+
 
 
 

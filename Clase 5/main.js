@@ -9,7 +9,7 @@ En JS , se declara con const a un objeto
     nombre: "pepito", 
     edad: 45, 
     dirección: "Av",
-};*/
+};
 /*const persona1={
     nombre:"pepita",
     edad:20,
@@ -26,6 +26,8 @@ persona.edad=100;
 persona.telefono=1234; //Tambien puedes agregar una propiedad
 persona["altura"]=90;
 console.log(persona);*/
+
+
 /*Es como un molde*/
 /*nombre, es la clave*/
 /*function persona(nombrePersona,edadPersona,direcciónPersona,telefono){ 
@@ -49,19 +51,19 @@ console.log(persona1);*/
     dirección:"AV",
 }*/
 /*function persona(info){ 
-    this.nombre=info.nombre; /*nombre, es la clave
+    this.nombre=info.nombre; //nombre, es la clave
     this.edad=info.edad;
     this.dirección=info.dirección;
-    /*this.hablar=function(){ /*El metodo es una función dentro de un arreglo
+    this.hablar=function (){ //El metodo es una función dentro de un arreglo
         console.log(`Hola Soy${this.nombre} ` );
     }
-}
-const persona1=new persona({
+}*/
+/*const persona1=new persona({
     nombre:"pepita",
     edad:20,
     dirección: "AXD",   
 });
-for (const clave in persona1){
+/*for (const clave in persona1){
     console.log("clave",clave); 
     console.log("valor",persona1[clave]); 
 }*/
@@ -102,12 +104,15 @@ class Producto{
         this.vendido=true;
     }
 }
+
 const producto1=new Producto("Monitor Gamer",23131,"httpasda",5);
+const producto2=new Producto("Teclado",123,"sdfsdfsdf",4);
 
 console.log(producto1);
 producto1.vender();
 console.log(producto1); 
 producto1.estado();
 console.log(producto1);
+console.log(producto2.nombre);
 
 
